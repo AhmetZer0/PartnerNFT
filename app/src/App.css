@@ -1,0 +1,240 @@
+
+.App-header {
+  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body{
+  background:url("../public/hero-bg.png");
+  
+  
+}
+.main{
+  margin-left:25%;
+}
+.main--create{
+  height:200px;
+  background:url("../public/bottom.png") left bottom no-repeat,linear-gradient(to right,#DC1FFF,#03E1FF, #00FFA3) center;
+  width:700px; 
+  border-radius:10px;
+  text-align: center;
+  transform:skew(-30deg);
+  cursor:pointer;
+  text-decoration: none;
+  background-size: 600px 150px,cover;
+}
+.main--create:hover{
+  background:url("../public/bottom.png") left bottom no-repeat,linear-gradient(to left,#DC1FFF,#03E1FF, #00FFA3) center;
+  background-size: 600px 150px,cover;
+}
+.main--join{
+  height:200px;
+  background:url("../public/bg-right.png") right no-repeat,linear-gradient(to right,#DC1FFF,#03E1FF, #00FFA3) center;
+  width:700px;
+  text-align: center;
+  transform:skew(30deg);
+  border-radius:10px;
+  cursor:pointer;
+  background-size: 330px 250px,cover;
+}
+.main--join:hover{
+  background:url("../public/bg-right.png") right no-repeat,linear-gradient(to left,#DC1FFF,#03E1FF, #00FFA3) center;
+  background-size: 330px 250px,cover;
+}
+.main--empty{
+  height:200px;
+  background:url("../public/image.png") bottom left no-repeat,linear-gradient(to right,#DC1FFF,#03E1FF, #00FFA3) center;
+  background-size: 400px 200px,cover;
+  width:700px; 
+  border-radius:10px;
+ 
+  transform:skew(-30deg);
+  margin-top:30px;
+  color:white;
+  cursor:pointer;
+}
+.main--empty:hover{
+  background:url("../public/image.png") bottom left no-repeat,linear-gradient(to left,#DC1FFF,#03E1FF, #00FFA3) center;
+  background-size: 400px 200px,cover;
+}
+
+.font{
+  font-size:40px;
+  font-weight:bold;
+  padding-top:10%;
+  color:black;
+  font-family:"Comic Sans MS";
+  text-decoration: none;
+  
+}
+#create{
+  transform:skew(30deg);
+}
+#join{
+  transform:skew(-30deg);
+}
+.main--link{
+  text-decoration: none;
+}
+
+.Room{
+  height:400px;
+  width:500px;
+  margin:auto;
+  margin-top:10%;
+  align-items: center;
+  align-content: center;
+  border-radius: 10px;
+  text-align: center;
+  color:black;
+  background: linear-gradient(to right,#DC1FFF,#03E1FF, #00FFA3);
+  font-family:"Comic Sans MS";
+}
+.Room:hover{
+  background: linear-gradient(to left,#DC1FFF,#03E1FF, #00FFA3);
+}
+.Room h1{
+  padding-top:0px;
+}
+.Room--inputs{
+  margin-top:20px;
+  height:50px;
+  width:400px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: black;
+  border:0px;
+  color:white;
+  font-size:20px;
+  font-family:"Comic Sans MS";
+  border-color: transparent;
+  outline: none;
+}
+
+#join--input{
+  margin-top:50px;
+}
+.room--options{
+  width:400px;
+  margin-right:10px;
+}
+#room--button{
+  height:50px;
+  width:200px;
+  margin-top:50px;
+  background-color:black;
+  border-radius: 10px;
+  cursor:pointer;
+  font-size:20px;
+  font-weight:bold;
+  color:white;
+  font-family:"Comic Sans MS";
+}
+#join--button{
+  height:50px;
+  width:200px;
+  margin-top:90px;
+  background-color:black;
+  border-radius: 10px;
+  cursor:pointer;
+  font-size:20px;
+  font-weight:bold;
+  color:white;
+  font-family:"Comic Sans MS";
+  
+}
+
+.randomRoom{
+  height:400px;
+  width:1000px;
+  margin:auto;
+  align-items: center;
+  align-content: center;
+  border-radius: 10px;
+  color:black;
+  background:linear-gradient(to left,#DC1FFF,#03E1FF, #00FFA3);
+  font-family:"Comic Sans MS";
+}
+.randomRoom--buttons{
+  background-color: black;
+  height:60px;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin:auto;
+  margin-top:10%;
+}
+.room--buttons{
+  height:50px;
+  width:220px;
+  cursor:pointer;
+  background:linear-gradient(to right,#DC1FFF,#03E1FF, #00FFA3);
+  border-radius: 10px;
+  border:0px;
+  font-size:25px;
+  font-weight:bold;
+  color:black;
+}
+#sell{
+  margin-left:20px;
+}
+
+.room--contents{
+  padding-left:20px;
+  padding-top:20px;
+}
+
+.room--table{
+  font-size:30px;
+}
+.room--table td{
+  font-weight: bold;
+  height:150px;
+  width:500px;
+}
+.room--table button{
+  height:60px;
+  width:150px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: black;
+  font-size: 20px;
+  color:white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.wallet-adapter-button-trigger {
+  background-color: transparent !important;
+}
+.wallet-adapter-button{
+  color:black !important;
+  font-family:"Comic Sans MS" !important;
+  font-weight: bold !important;
+  font-size:30px !important;
+  color:white !important;
+}
+
+.main--empty .wallet-adapter-button{
+  margin-left:400px;
+  color:black !important;
+}

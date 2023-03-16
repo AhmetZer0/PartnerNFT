@@ -1,0 +1,215 @@
+{
+  "version": "0.1.0",
+  "name": "partner_nft",
+  "instructions": [
+    {
+      "name": "initialize",
+      "accounts": [
+        {
+          "name": "roomAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "creator",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "createRoom",
+      "accounts": [
+        {
+          "name": "roomInfo",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "roomAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "creator",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "collectionName",
+          "type": "string"
+        },
+        {
+          "name": "collectionFloor",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "buyNft",
+      "accounts": [
+        {
+          "name": "roomInfo",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "partner",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "buyer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "roomId",
+          "type": "u32"
+        }
+      ]
+    },
+    {
+      "name": "sellNft",
+      "accounts": [
+        {
+          "name": "roomInfo",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "seller",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "roomId",
+          "type": "u32"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "RoomAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "lastroomId",
+            "type": "u32"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RoomInfo",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "collectionName",
+            "type": "string"
+          },
+          {
+            "name": "collectionFloor",
+            "type": "u64"
+          },
+          {
+            "name": "lastRoomId",
+            "type": "u32"
+          },
+          {
+            "name": "balance",
+            "type": "u64"
+          },
+          {
+            "name": "count",
+            "type": "u32"
+          },
+          {
+            "name": "partners",
+            "type": {
+              "vec": "publicKey"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Partner",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "roomInfoId",
+            "type": "u32"
+          },
+          {
+            "name": "buyer",
+            "type": "publicKey"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "FullRoom",
+      "msg": "This room is full !"
+    },
+    {
+      "code": 6001,
+      "name": "RoomIsNotFull",
+      "msg": "Room is not full !"
+    },
+    {
+      "code": 6002,
+      "name": "NotInRoom",
+      "msg": "You are not in this room!"
+    }
+  ],
+  "metadata": {
+    "address": "3p4ky79o4j6BBbmWAezZUCCm1tnsvTakZDgwyVvMPtoU"
+  }
+}
