@@ -13,7 +13,6 @@ import { ConnectionProvider, WalletProvider, useWallet } from '@solana/wallet-ad
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui'
 import "@solana/wallet-adapter-react-ui/styles.css"
 
-import { AppProvider } from "./context";
 
 import { useState, useMemo, useEffect } from "react"
 

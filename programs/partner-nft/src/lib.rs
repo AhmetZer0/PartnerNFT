@@ -17,7 +17,7 @@ pub enum RoomErrors {
 }
 
 #[program]
-mod hello_anchor {
+mod partner_nft {
     use super::*;
     pub fn initialize(_ctx: Context<InitializeRoom>) -> Result<()> {
         Ok(())
@@ -90,10 +90,13 @@ mod hello_anchor {
                 room_info.balance * 10u64.pow(9) / 2;
             **seller.to_account_info().try_borrow_mut_lamports()? +=
                 room_info.balance * 10u64.pow(9) / 2;
+            
         }
-
         room_info.balance -= room_info.collection_floor / 2;
         room_info.count -= 1;
+        msg!("Signer is this {}",&seller.key());
+
+        
 
         Ok(())
     }
