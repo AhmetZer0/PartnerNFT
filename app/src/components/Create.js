@@ -4,6 +4,7 @@ import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import collection from "../collection.json"
 
 
+
 export default function Create(){
 	const LINK = "";
     const navigate = useNavigate();
@@ -31,8 +32,6 @@ export default function Create(){
 				}
 			})
 		}
-
-		
 	
 
 	const img = (LINK + url+".jpg");
